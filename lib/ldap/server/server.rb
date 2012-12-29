@@ -81,8 +81,7 @@ class Server
   end
 
   def stop
-    @thread.raise Interrupt, "" # <= temporary fix for 1.8.6
-    @thread.join
+    @thread.raise Interrupt
   end
 
 end # class Server
